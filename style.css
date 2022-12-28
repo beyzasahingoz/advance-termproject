@@ -5,11 +5,12 @@
 body {
   font-family: sans-serif;
   margin: 0;
-  background-color: rgb(173, 104, 200);
+  background-color: rgb(223, 202, 232);
 }
 
 h1 {
-  text-align: center;
+  margin-left: 100px;
+  /*670*/
 }
 #game {
   display: flex;
@@ -17,11 +18,22 @@ h1 {
 }
 #currentClass {
   font-weight: bold;
-  text-align: center;
+  margin-left: 150px;
+  /*700*/
 }
+#winnerCount {
+  font-weight: bold;
+  margin-left: 50px;
+  margin-top: 50px;
+  width:300px;
+  height:100px;
+  background-color: rgb(217, 206, 206);
+}
+
 .board {
-  width: 100vw;
-  height: 400px;
+  width: 400px;
+  height: 320px;
+  /*margin-left: 550px;*/
   display: grid;
   justify-content: center;
   align-content: center;
@@ -109,7 +121,7 @@ h1 {
   .board.circle .cell:not(.x):not(.circle):hover::after {
     width: calc(var(--mark-size) * .7);
     height: calc(var(--mark-size) * .7);
-    background-color:rgb(173, 104, 200);
+    background-color:rgb(223, 202, 232);
   }
   
   .winning-message {
@@ -123,7 +135,7 @@ h1 {
     justify-content: center;
     align-items: center;
     color: white;
-    font-size: 5rem;
+    font-size: 4rem;
     flex-direction: column;
   }
   
@@ -144,3 +156,13 @@ h1 {
   .winning-message.show {
     display: flex;
   }
+ /* @media (max-width: 400px) {
+    .board {
+    width: 300px;
+    height: 240px;
+    }
+    .cell {
+    --cell-size: 75px;
+    --mark-size: calc(var(--cell-size) * .9);
+    }
+    } */
